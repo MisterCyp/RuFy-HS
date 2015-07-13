@@ -19,8 +19,7 @@ Le projet utilise l'API créée par YTS : https://yts.to/api
                 include /etc/nginx/conf.d/php.conf;
             	include /etc/nginx/conf.d/cache.conf;
             }
-- Donner les droits d'�criture au dossier watch de rutorrent � l'utilisateur www-data 
-
+- Donner les droits d'écriture à l'utilisateur www-data au dossier watch de rutorrent.
 - il suffit de vous connecter avec vos accès rutorrent à l'adresse suivante : http://IP_de_mon_SERVEUR/rufy
 
 ## Détails 
