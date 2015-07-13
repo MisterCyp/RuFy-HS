@@ -12,7 +12,7 @@ Le projet utilise l'API créée par YTS : https://yts.to/api
 - Copier le repository dans le dossier /var/www/rufy
 - Ajouter les lignes suivantes dans le fichier : rutorrent.conf (si vous avez suivi un des tutos présents sur mondedie.fr)
         
-      location ^~ /rufy {
+         location ^~ /rufy {
             	root /var/www;
             	index index.php;
             	
