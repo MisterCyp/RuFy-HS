@@ -20,3 +20,8 @@ Le projet utilise l'API créée par YTS : https://yts.to/api
             	include /etc/nginx/conf.d/cache.conf;
             }
 - il suffit de vous connecter avec vos accès rutorrent à l'adresse suivante : http://IP_de_mon_SERVEUR/rufy
+
+## Détails 
+
+Les torrents téléchargés iront dans le dossier suivant : '/home/nom_user/watch' afin d'être reconnu par rutorrent
+Si votre dossier est différent, vous pouvez modifier le chemin dans le fichier trait.php à la ligne 13.
