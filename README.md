@@ -5,7 +5,7 @@ Le projet utilise l'API créée par YTS : https://yts.to/api
 #Installation
 
 ## Pré-requis
-- un moteur PHP et un client torrent installé sur son serveur
+- un moteur PHP et un client torrent installés sur son serveur
 
 ## Démarches
 
