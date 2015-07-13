@@ -9,8 +9,6 @@ body {
   #padding-top: 100px;
 }
 
-
-
 .navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
@@ -30,6 +28,7 @@ body {
   display: inline-block;
   width: 150px;
 }
+
 #bloc-recherche {
 
 }
@@ -56,11 +55,10 @@ body {
   #text-align: center;
 } 
 
-
-
 #top-movies {
 	text-align:center;
 } 
+
 #top-movies  img {
 	max-height: 200px;
 	border: 5px solid black;
@@ -97,6 +95,7 @@ body {
 	
 	display:inline-block;
 }
+
 .year, .genre, .note {
 	margin:0px;
 	padding:7px;
@@ -131,6 +130,7 @@ body {
   margin: 0;
   left: 0;
  }
+ 
  .alert-fixed-bottom {
   position: fixed;
   width: 35%;
@@ -162,6 +162,7 @@ body {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+
 .pagination > li:last-child > a, .pagination > li:last-child > span {
   margin-right: 0;
   border-top-right-radius: 20px;
