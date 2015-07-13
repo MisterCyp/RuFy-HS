@@ -24,4 +24,4 @@ Le projet utilise l'API créée par YTS : https://yts.to/api
 ## Détails 
 
 Les torrents téléchargés iront dans le dossier suivant : `/home/nom_user/watch` afin d'être reconnu par rutorrent
-Si votre dossier est différent, vous pouvez modifier le chemin dans le fichier trait.php à la ligne 13.
+Si votre dossier est différent, vous pouvez modifier le chemin dans le fichier `trait.php` à la ligne 13.
