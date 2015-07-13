@@ -16,6 +16,6 @@ Le projet utilise l'API créée par YTS : https://yts.to/api
             	root /var/www;
             	index index.php;
             	
-              include /etc/nginx/conf.d/php.conf;
+                include /etc/nginx/conf.d/php.conf;
             	include /etc/nginx/conf.d/cache.conf;
             }
