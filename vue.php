@@ -2,6 +2,7 @@
 <html>
   <head>
   <meta charset="utf-8">
+  <title> RuFy </title>
     <?php include('include/header.html') ?>
   </head>
   <body>
