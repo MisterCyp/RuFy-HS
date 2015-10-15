@@ -36,6 +36,42 @@
 		  ?>
 		  </p>
           </div> 
+		  
+		  <!-- Debut SUGGESTION -->
+ <?php if($suggest->data->movie_suggestions_count>0) 
+		  { ?>
+	 
+<div class="panel panel-primary">
+	<div class="panel-heading"><span class="glyphicon glyphicon-time"></span> Films similaires</div>
+	<div class="panel-body">
+	
+			<div class="row" id="top-movies">
+			 <?php 		$i = 0;
+					$nb_affichage = 4;
+	  
+		foreach($suggest->data->movie_suggestions->movie_suggestion as $movie){ ?>
+				
+				<div class="col-md-3 col-xs-6 pull-down"> 
+							
+									<img src="<?php echo $movie->medium_cover_image ?>" alt="...">
+									<div class="caption">
+										<h4><?php echo $movie->title ?></h4>
+									</div>
+							
+				</div>
+				
+				<?php
+			if(++$i>=$nb_affichage)
+                break;
+			}
+			?>
+			
+		</div>
+</div>	
+</div>			  
+		  <?php } ?>
+		  
+		  <!-- FIN SUGGESTION -->
 
 		  <script src="bootstrap/js/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
