@@ -168,3 +168,11 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+.modal-dialog {
+    width: 800px;
+}
+
+.modal-dialog panel-primary {
+    margin: 5%;
+}
