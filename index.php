@@ -58,7 +58,7 @@ if(isset($_SERVER['PHP_AUTH_USER']))
 	 try{
 		 
 			if(!@$xml=simplexml_load_file('https://yts.to/api/v2/list_movies.xml?'.$tri.'&page='.$numero_page)){
-				throw new Exception('Flux introuvable');
+				throw new Exception('L\'API YIFY ne fonctionne pas.');
 			}
 			
 			if(empty($xml->status) ) throw new Exception('Flux invalide');	 
@@ -73,8 +73,8 @@ if(isset($_SERVER['PHP_AUTH_USER']))
 		
 		}
 		catch(Exception $e){
-			//include('erreur.php')
-			echo $e->getMessage() ;
+			include('erreur.php');
+			//echo $e->getMessage() ;
 		}
 		
 }
