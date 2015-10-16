@@ -34,8 +34,44 @@
 		  ?>
 		  <p><h4>Notes Allociné</h4>
 		  
-		  <p>Presse :  <?php echo number_format($result['movie']['statistics']['pressRating'],1);?> <br>
-		  Spectateurs :  <?php echo number_format($result['movie']['statistics']['userRating'],1);?>
+		  <p>Presse :  <?php for($i=0 ; $i < 5 ; $i++ )
+							  {
+								if($i < round($result['movie']['statistics']['pressRating'],0,PHP_ROUND_HALF_DOWN))
+								{
+									echo   '<span class="fa fa-star"></span>' ;
+								}
+								else
+								{
+									if( 0.3 < (number_format($result['movie']['statistics']['pressRating'],1) - $i ) && (number_format($result['movie']['statistics']['pressRating'],1) - $i) <0.7 )
+									{
+										echo'<span class="fa fa-star-half-o "></span>' ;
+									}
+									else{
+										echo   '<span class="fa fa-star-o"></span>' ;
+									}
+								}
+							  }
+							  echo " ".number_format($result['movie']['statistics']['pressRating'],1);?> <br>
+							  
+		  Spectateurs : <?php for($i=0 ; $i < 5 ; $i++ )
+							  {
+								if($i < round($result['movie']['statistics']['userRating'],0,PHP_ROUND_HALF_DOWN))
+								{
+									echo   '<span class="fa fa-star"></span>' ;
+								}
+								else
+								{
+									if( 0.3 < (number_format($result['movie']['statistics']['userRating'],1) - $i ) && (number_format($result['movie']['statistics']['userRating'],1) - $i) <0.7 )
+									{
+										echo'<span class="fa fa-star-half-o "></span>' ;
+									}
+									else{
+										echo   '<span class="fa fa-star-o"></span>' ;
+									}
+								}
+								
+							  }
+							  echo " ".number_format($result['movie']['statistics']['userRating'],1);?> <br>
 		  </p>
 		  </p>
 		  
@@ -75,5 +111,7 @@
 		  
 		  <script src="bootstrap/js/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	
+
 	<script src="bootstrap/js/telechargement.js"> </script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
