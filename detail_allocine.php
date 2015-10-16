@@ -9,7 +9,18 @@
           
           <!-- le contenu HTML de la popup --> 
           <div class="modal-body"> 
-          <p class="lead"><img src="<?php echo $result['movie']['poster']['href'];?>" class="pull-left affiche-detail" /> <h2><?php echo $title ;?></h2> </p> 
+          <p class="lead"><img src="<?php echo $result['movie']['poster']['href'];?>" class="pull-left affiche-detail" /> 
+			  <h2><?php if(isset($result['movie']["title"])) 
+						  {
+							  echo $result['movie']["title"] ;
+						  }
+						  else
+						  {
+							echo $title; 
+						  }
+				 ?>
+			  </h2> 
+		  </p> 
           
 		  <p>
 			  Durée : <?php echo date('h\hi\m\i\n', $result['movie']["runtime"]);?><br/>
