@@ -64,7 +64,29 @@
 	  <?php 		$i = 0;
 					$nb_affichage = 12;
 	  
-		foreach($xml->data->movies->movie as $movie){ ?>
+		foreach($xml->data->movies->movie as $movie){
+			$urls = "";
+			$qualities = "" ;
+			$i = 0 ;
+			
+			foreach($movie->torrents->torrent as $torrent)
+			{
+				if($i > 0)
+				{
+					$urls.= "%20".$torrent->url ;
+					$qualities .= "%20".$torrent->quality ;
+				}
+				else
+				{
+					$urls.= $torrent->url ;
+					$qualities .= $torrent->quality ;
+				}
+				$i +=1;
+				
+				
+			}
+
+		?>
 		
         <div class="col-md-3 col-sm-4 col-xs-12 pull-down">
 		
@@ -75,7 +97,7 @@
 							<div class="row year-genre-note">
 									<p class="col-xs-3 year "><?php echo $movie->year ; ?></p> <p class="col-xs-6 genre"><?php echo $movie->genres->genre ?></p> <p class="col-xs-3 note"><?php echo $movie->rating ; ?></p>
 							</div>
-							<p><a  value="<?php echo $movie->torrents->torrent->url ?>" type="button" class="btn download"><span class="glyphicon glyphicon-download-alt"></span> <?php echo $movie->torrents->torrent->quality ?></a><button id="<?php echo $movie->id ; ?>" type="button" class="btn btn-primary detail-movie">Détails <span class="glyphicon glyphicon-chevron-right"></span></button> </p>
+							<p><a  value="<?php echo $movie->torrents->torrent->url ?>" type="button" class="btn download"><span class="glyphicon glyphicon-download-alt"></span> <?php echo $movie->torrents->torrent->quality ?></a><button name="<?php echo strval($movie->title) ; ?>" year="<?php echo strval($movie->year) ; ?>" id="<?php echo strval($movie->id) ; ?>" urls="<?php echo $urls ; ?>" qualities="<?php echo $qualities ; ?>" type="button" class="btn btn-primary detail-movie">Détails <span class="glyphicon glyphicon-chevron-right"></span></button> </p>
 						  </div>
 				</div> 
 		

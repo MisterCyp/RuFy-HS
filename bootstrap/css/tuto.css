@@ -170,9 +170,9 @@ body {
 }
 
 .modal-dialog {
-    width: 800px;
+    width: 70%;
 }
 
-.modal-dialog panel-primary {
+.modal-dialog .panel-primary {
     margin: 5%;
 }

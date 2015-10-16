@@ -10,7 +10,7 @@
           <!-- le contenu HTML de la popup --> 
           <div class="modal-body"> 
           <p class="lead"><img src="<?php echo $xml->data->images->medium_cover_image;?>" class="pull-left affiche-detail" /> <?php echo $xml->data->title ;?> </p> 
-          <p><?php echo $xml->data->year;?><br/>
+          <p><?php echo $xml->data->year;?><br/></p>
 		  <?php foreach($xml->data->genres->genre as $genre) 
 				  {
 					  echo $genre.' ';
@@ -21,7 +21,7 @@
 		  
 		  <p><img src="images/rt-upright.png" alt="Note Rotten" > <?php echo $xml->data->rt_audience_score;?> %</p>
 		  
-		  </p>
+		  
 		  <p><?php echo $xml->data->description_full;?></p> 
           </div>
           
@@ -38,7 +38,7 @@
           </div> 
 		  
 		  <!-- Debut SUGGESTION -->
- <?php if($suggest->data->movie_suggestions_count>0) 
+ <?php if(0) //$suggest->data->movie_suggestions_count>0
 		  { ?>
 	 
 <div class="panel panel-primary">

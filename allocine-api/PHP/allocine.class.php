@@ -57,7 +57,7 @@ class Allocine
         $params = array(
             'partner' => $this->_partner_key,
             'code' => $id,
-            'profile' => 'small',
+            'profile' => 'medium',
             'filter' => 'movie',
             'striptags' => 'synopsis,synopsisshort',
             'format' => 'json',

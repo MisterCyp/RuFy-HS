@@ -156,11 +156,17 @@ $("body").on("hidden.bs.modal", ".modal", function () {
 	  $(function (){
 					$('.detail-movie').each(function () {
 							  var $button = $(this);
+							  var $title = $button.attr('name');
+							  var $year = $button.attr('year');
 							  var $id = $button.attr('id');
-							  							  
+							  var $urls = $button.attr('urls');
+							  var $qualities = $button.attr('qualities');
+							  							  							  
 							  $button.click(function() { 
 
-							  var $page = "controleur_detail.php?movie_id="+$id;
+							  var $page = 'controleur_detail.php?title='+$title+'&year='+$year+'&movie_id='+$id+'&urls='+$urls+'&qualities='+$qualities;
+							  $page = $page.replace(/ /g,'%20');
+							  console.log($qualities);
 							  							  
 								$("#infos").modal({ remote: $page } ,"show");
 								});
