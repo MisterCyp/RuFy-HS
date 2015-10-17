@@ -47,7 +47,7 @@
 		  
 		  <p>Presse :  <?php for($i=0 ; $i < 5 ; $i++ )
 							  {
-								if($i < round($result['movie']['statistics']['pressRating'],0,PHP_ROUND_HALF_DOWN))
+								if($i < round(number_format($result['movie']['statistics']['pressRating'],1),0,PHP_ROUND_HALF_DOWN))
 								{
 									echo   '<span class="fa fa-star"></span>' ;
 								}
@@ -66,7 +66,7 @@
 							  
 		  Spectateurs : <?php for($i=0 ; $i < 5 ; $i++ )
 							  {
-								if($i < round($result['movie']['statistics']['userRating'],0,PHP_ROUND_HALF_DOWN))
+								if($i < round(number_format($result['movie']['statistics']['userRating'],1),0,PHP_ROUND_HALF_DOWN))
 								{
 									echo   '<span class="fa fa-star"></span>' ;
 								}
